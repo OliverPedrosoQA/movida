@@ -7,15 +7,11 @@
     <title>Alterar Marca</title>
 </head>
 <body>
-    
-    <form action="{{ route('brands.update', [ 'brand' => $record->id ])}} " method="post">
-        @method('PATCH')
+    {!!Form::model($record, ['method'=>'PATCH', 'route'=> ['brands.update', $record->id]])!!}
         @csrf
-        
-        <label for="name">Marca</label>
-        <input type="text" name="name" id="name" value="{{$record->name}}">
-        
-        <button type="submit">Salvar</button>
-    </form>
+        {!!Form::label('name', 'Marca')!!}
+        {!!Form::text('name', $record->name)!!}
+        {!!Form::submit('Salvar!')!!}
+    {!! Form::close() !!}
 </body>
 </html>

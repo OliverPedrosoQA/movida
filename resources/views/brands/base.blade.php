@@ -10,4 +10,4 @@
     
     @yield('conteudo')
 </body>
-</html> ''
+</html> 
