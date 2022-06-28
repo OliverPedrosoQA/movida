@@ -41,7 +41,7 @@
 
 
 @else
-    <p>Nenhuma marca encontrada</p>
+    <p>Nenhum cliente encontrado</p>
 @endif
 
 @endsection 

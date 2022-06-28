@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,5 @@ Route::get('/', function () {
 Route::resource('vehicles', VehicleController::class);
 
 Route::resource('brands', BrandController::class);
+
+Route::resource('customers', CustomerController::class);
