@@ -25,12 +25,11 @@
                 <td><a href="{{route('brands.show', [ 'brand' => $item->id ]) }}">{{$item->name}}</a></td>
                 <td><a href="{{route('brands.edit', [ 'brand' => $item->id ]) }}">e</a></td>
                 <td>
-                    <form action="{{ route('brands.destroy', [ 'brand' => $item->id ])}} " method="post">
-                    @method('DELETE')
-                    @csrf
-                                       
-                    <button type="submit">x</button>
-                    </form>
+                    
+                    {!!Form::open( ['method'=>'DELETE', 'route'=> ['brands.destroy', $item->id]])!!}
+                        @csrf
+                        {!!Form::submit('X')!!}
+                    {!! Form::close() !!}
                 </td>
             </tr>
         @endforeach
