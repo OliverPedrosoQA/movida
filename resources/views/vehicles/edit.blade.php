@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Alterar Marca</title>
+    <title>Alterar Veiculo</title>
 </head>
 <body>
-    {!! Form::model($record, ['method' => 'PATCH', 'route' => ['brands.update', $record->id]])!!}
+    {!! Form::model($plate, ['method' => 'PATCH', 'route' => ['vehicles.update', $plate->id]])!!}
 @csrf
 
-{!! Form::label('name', 'Nome')!!}
-{!! Form::text('name')!!}
+{!! Form::label('plate', 'Placa')!!}
+{!! Form::text('plate')!!}
 
 {!! Form::submit('Salvar')!!}
 
 {!! Form::close() !!}
 
 
-    {{--<form action="{{ route('brands.update', [ 'brand' => $record->id ])}} " method="post">
+    {{--<form action="{{ route('vehicles.update', [ 'plate' => $record->id ])}} " method="post">
         @method('PATCH')
         @csrf
         
-        <label for="name">Marca</label>
-        <input type="text" name="name" id="name" value="{{$record->name}}">
+        <label for="plate">Placa</label>
+        <input type="text" name="plate" id="plate" value="{{$record->name}}">
         
         <button type="submit">Salvar</button>
     </form>--}}

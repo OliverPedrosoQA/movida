@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/veiculos', [VehicleController::class, 'index'])->name('vehicles.index');
+/* Route::get('/veiculos', [VehicleController::class, 'index'])->name('vehicles.index');
 Route::get('/veiculos/novo', [VehicleController::class, 'create'])->name('vehicles.create');
 Route::post('/veiculos', [VehicleController::class, 'store'])->name('vehicles.store');
 Route::get('/veiculos/{veihcle}', [VehicleController::class, 'show'])->name('vehicles.show');
 Route::get('/veiculos/{veihcle}/editar', [VehicleController::class, 'edit'])->name('vehicles.edit');
 Route::patch('/veiculos/{veihcle}', [VehicleController::class, 'update'])->name('vehicles.update');
-Route::delete('/veiculos/{veihcle}', [VehicleController::class, 'destroy'])->name('vehicles.destroy');
+Route::delete('/veiculos/{veihcle}', [VehicleController::class, 'destroy'])->name('vehicles.destroy');*/
 
 Route::resource('brands', BrandController::class);
+Route::resource('vehicles', VehicleController::class);
+Route::resource('customers', CustomerController::class);
