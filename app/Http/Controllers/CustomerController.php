@@ -6,6 +6,7 @@ use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
 use App\Models\Customer;
 
+
 class CustomerController extends Controller
 {
     /**
@@ -72,6 +73,10 @@ class CustomerController extends Controller
         return view('customers/edit', [
             'record' => $customer
         ]);
+<<<<<<< HEAD
+    
+=======
+>>>>>>> d4e25ba61b44c8280b5bf8a235c238ecd45750f0
     }
 
     /**

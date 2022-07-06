@@ -15,7 +15,7 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $brands = Brand::withTrashed()->get();
+        $brands = Brand::all(); //query que busca todos as marcas do banco
         return view('brands/index', [
             'collection' => $brands
         ]);

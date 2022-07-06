@@ -26,7 +26,7 @@
             <tr>
                 <td><a href="{{route('customers.show', [ 'customer' => $item->id ]) }}">{{$item->first_name}}</a></td>
                 <td><a href="{{route('customers.show', [ 'customer' => $item->id ]) }}">{{$item->last_name}}</a></td>
-                <td>{{$item->phone_number}}</td>
+                <td><a href="{{route('customers.show', [ 'customer' => $item->id ]) }}">{{$item->cellphone_number}}</a></td>
                 <td><a href="{{route('customers.edit', [ 'customer' => $item->id ]) }}">e</a></td>
                 <td>
                     <form action="{{ route('customers.destroy', [ 'customer' => $item->id ])}} " method="post">
