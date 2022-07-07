@@ -3,6 +3,7 @@
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\RentController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -31,3 +32,4 @@ Route::delete('/veiculos/{veihcle}', [VehicleController::class, 'destroy'])->nam
 Route::resource('brands', BrandController::class);
 Route::resource('vehicles', VehicleController::class);
 Route::resource('customers', CustomerController::class);
+Route::resource('rents', CustomerController::class);
